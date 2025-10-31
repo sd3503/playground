@@ -4,17 +4,16 @@ test
 """
 
 
-def template(n):
-
-    return n
+def template():
+    result = ""
+    return result
 
 
 def solution():
-    """문제 해결 함수"""
-
-    # print(f"Input: {}")
-    # print(f"Output: {}")
+    print(f"Input: number={number} \n  Output: {template()}")
+    return template()
 
 
 if __name__ == "__main__":
+
     solution()
