@@ -1,20 +1,23 @@
 # -*- coding: utf-8 -*-
 
 
-def solution(num):
+def solution(n, k):
+    result = []
+    for i in range(k, n + 1, k):
+        result.append(i)
 
-    return 100
+    return result
 
 
 def customPrint(*args):
     print("Input:", args)
 
     print("requrire_output:")
-    print(100)
+    print([3, 6, 9])
 
     print("output:")
     print(solution(*args))
 
 
 if __name__ == "__main__":
-    customPrint(100)
+    customPrint(15, 5)
