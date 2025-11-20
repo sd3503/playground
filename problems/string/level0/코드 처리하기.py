@@ -1,14 +1,23 @@
 # -*- coding: utf-8 -*-
 
 
-def solution(num):
+def solution(code):
+    ret = []
+    mode = 0
+    for i, x in enumerate(code):
+        if x == "1":
+            mode = int(not mode)
+        elif not mode and not i & 1:
+            ret.append(x)
+        elif mode and i & 1:
+            ret.append(x)
 
-    return 100
+    return "".join(ret) or "EMPTY"
 
 
 def customPrint(*args):
 
-    req_out = 100
+    req_out = "acbac"
 
     get_out = solution(*args)
     # print("Input:", args)
@@ -22,4 +31,4 @@ def customPrint(*args):
 
 
 if __name__ == "__main__":
-    customPrint(100)
+    customPrint("abc1abc1abc")
